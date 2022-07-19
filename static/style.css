@@ -1,0 +1,187 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    overflow: hidden;
+}
+#imgSlide{
+    height: 100vh;
+    width: 100%;
+    animation: zoom 4s linear infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.3);
+    }
+    15%{
+        transform: scale(1);
+    }
+    85%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6));
+    position: absolute;
+    top: 0;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 99%;
+    height: auto;
+    padding: 5px;
+}
+.logo img{
+    flex-basis: 15%;
+    margin: 0px;
+    padding: 0px;
+    width: 70px;
+    height: 62px;
+    margin-left: 5px;
+    padding-left: 6px;
+}
+.menu{
+    flex: 1;
+    text-align: right;
+    margin-right: 25px;
+    align-items: center;
+    margin-top: 12px;
+    padding: 5px 0px; 
+}
+.menu img{
+    cursor: pointer;
+    height: 33px;
+    width: 38px;
+    margin-right: 5px;
+    padding-right: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+.primary{
+    font-size: 3.5rem;
+    width: 60%;
+    margin: 120px auto 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.head{
+    
+    display: flex;
+    
+}
+@keyframes down {
+    from{
+        margin:80px auto 0;
+    }
+    to{
+        margin:120px auto 0;
+    }
+}
+.main h3{
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+#left{
+    text-align: right;
+    padding-right: 12px;
+    font-weight: 800;
+}
+
+#right{
+    color: #040b38;
+    font-family: 'Roboto Slab', serif;
+    padding-left: 0px;
+    animation: down 2s 0s;
+    animation-iteration-count: infinite;
+    text-align: left;
+    font-weight: 900;
+}
+.msg{
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    transition: width 0.4s ease-in-out;
+    
+}
+.msg input{
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 6px 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.0rem;
+    background-color: black;
+    color: white;
+}
+.msg input:focus{
+    width: 400px;
+}
+.btn{
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+    padding: 5px 35px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(177 102 13);
+    color: white;
+    font-weight: 600;
+}
+button:hover{
+    background-color: transparent;
+    transition: 0.3s;
+}
+.rules{
+    float: right;
+    /* color: white; */
+    margin-right: 15px;
+    margin-top: 55px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.185);
+    width: 40%;
+    /* height: 25%; */
+    padding: 15px;
+    border-radius: 8px ;
+}
+.note{
+    color: rgb(255, 0, 0);
+    padding-bottom: 0px;
+}
+.aveye{
+    background: white;
+    padding: 2px;
+    margin: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: rgb(200, 37, 37);
+    text-decoration: underline;
+    border-radius: 4px;
+    border: 0px;
+}
+#list{
+    display: none;
+}

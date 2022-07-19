@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static '/result.css' %}>
+    <title>Done!!</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="slider">
+            <img src={% static 'Images/bgr1.jpg' %} alt="" id="imgSlide">
+            
+        </div>
+        <div class="overlay">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src={% static 'Images/Prankster-logos_black.png' %} alt="">
+                </div>
+                <div class="menu">
+                    <img src= {% static 'Images/facebooklogo.png' %} alt="">
+                    <img src={% static 'Images/instalogo.png' %} slt="">
+                    <img src={% static 'Images/linkedinlogo.png' %} alt="">
+                    <img src={% static 'Images/twitterlogo.png' %} alt="">
+                </div>
+            </nav>
+            <div class="cont">
+            <div class="written">
+                <h1 class="primary">Hope you like this prank!</h1>
+                <form action="home">
+                <h2><button class='a'>Click Here</button> to use this tool again</h2>
+                </form>
+                <h3>Do follow us on above mentioned platforms and give your suggestions</h3>
+            </div>
+            <div class="right">
+                <img src={% static 'Images/kid.png' %} alt="">
+            </div>
+        </div>
+        </div> 
+</body>
+</html>

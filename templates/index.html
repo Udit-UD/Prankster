@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prankster</title>
+    <link rel="shortcut icon" type="image" href={% static '/Images/Prankster-logos_transparent.png' %}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href={% static 'style.css'%}>
+    <link rel="stylesheet" media="screen and (max-width: 720px)" href={% static '/phone.css' %}>
+    
+</head>
+<body onload="slideshow()">
+    <div class="banner">
+        <div class="slider">
+            <img src={% static 'Images/background1.jpg' %} alt="" id="imgSlide">
+            
+        </div>
+        <div class="overlay">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src={% static 'Images/Prankster-logos_black.png' %} alt="">
+                </div>
+                <div class="menu">
+                    <img src= {% static 'Images/facebooklogo.png' %} alt="">
+                    <img src={% static 'Images/instalogo.png' %} alt="">
+                    <img src={% static 'Images/linkedinlogo.png' %} alt="">
+                    <img src={% static 'Images/twitterlogo.png' %} alt="">
+                </div>
+            </nav> 
+            <div class="main">
+                <div class="head">
+                    <h1 class="primary" id="left">
+                        Hello <h1 class="primary" id="right">Prankster!</h1>
+                    </h1>
+
+                </div>
+                <h3>
+                    We are here to irritate your friend, we will shoot 500 messages to your friend's whatsapp number.<br>And the fun fact is you don't have to provide your friend's number.
+                </h3>
+                <form action="search" method="POST">
+                    {% csrf_token %}
+                <div class="msg">
+                    <input type="text" placeholder="Write your message here!" name="text">
+                </div>
+                <div class="btn">
+                    <button>
+                        SEND!
+                    </button>
+                </form>
+                </div>
+            </div>
+            <div class="rules">
+                Here are some <button class="aveye" onclick="list()">steps</button> you must know before doing this prank:
+                <ul id="list">
+                    <li>Open the chat of the person whom you want to trick with.</li>
+                    <li>Then after writing your message here immediately sput your cursor to the friend's chat.</li>
+                    <li class="note">Note: If you fail to put your cursor on the typing bar of the friend, then you might get pranked!</li>
+                </ul>
+            </div>
+
+        </div> 
+    </div>
+    <script>
+        let slides = document.getElementById("imgSlide");
+        let image = new Array(`{% static 'Images/background1.jpg' %}`,
+            `{% static 'Images/background2.jpg' %}`,
+            `{% static 'Images/background3.jpg' %}`
+        )
+        let flag = 0;
+        function slideshow() {
+            if (flag > image.length - 1) {
+                flag = 0;
+            }
+            slides.src = image[flag];
+            flag++;
+            setTimeout('slideshow()', 3000)
+        }
+        function list(){
+            let list1=document.getElementById('list');
+            if (list1.style.display=='none') {
+                list1.style.display='block';
+            }else{
+                list1.style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>

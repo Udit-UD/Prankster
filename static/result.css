@@ -1,0 +1,114 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    overflow: hidden;
+}
+#imgSlide{
+    height: 100vh;
+    width: 100%;
+    filter: blur(4px);
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6));
+    position: absolute;
+    top: 0;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 99%;
+    height: auto;
+    padding: 5px;
+    background: linear-gradient(rgba(255, 255, 255, 0.248),rgba(255, 255, 255, 0.274));
+    box-shadow: 0px 10px rgba(255, 255, 255, 0.267);
+}
+.logo img{
+    flex-basis: 15%;
+    margin: 0px;
+    padding: 0px;
+    width: 70px;
+    height: 62px;
+    margin-left: 5px;
+    padding-left: 6px;
+}
+.menu{
+    flex: 1;
+    text-align: right;
+    margin-right: 25px;
+    align-items: center;
+    margin-top: 12px;
+    padding: 5px 0px; 
+}
+.menu img{
+    cursor: pointer;
+    height: 33px;
+    width: 38px;
+    margin-right: 5px;
+    padding-right: 0px;
+}
+.cont{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 85%;
+    /* overflow: hidden; */
+}
+.written{
+    position: relative;
+    height: 50%;
+    width: 38%;
+    background-color: rgba(240, 248, 255, 0.43);
+    border-radius: 8px;
+    text-align: center;
+    top: 18%;
+    margin: 0px 45px;
+    padding: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+.primary{
+    font-size: 3.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+
+}
+.a{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    font-style: italic;
+}
+h2{
+    padding-top: 3px;
+    margin-top: 0px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+h3{
+    color: rgb(8, 7, 7);
+    font-family: 'Poppins', sans-serif;
+
+}
+.right img{
+    position: relative;
+    top: 15%;
+    height: 80%;
+}
